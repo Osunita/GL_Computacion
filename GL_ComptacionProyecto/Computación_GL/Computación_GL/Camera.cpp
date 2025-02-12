@@ -1,95 +1,90 @@
-#include "Camera.h"
+#include"Camera.h"
+
 
 Camera::Camera(int width, int height, glm::vec3 position)
 {
 	Camera::width = width;
 	Camera::height = height;
 	Position = position;
-
-	lastX = width / 2.0f;
-	lastY = height / 2.0f;
 }
 
-void Camera::CameraMatrix(float FOV, float nearPlane, float farPlane, unsigned int ShadeID, const char* uniform)
+void Camera::updateMatrix(float FOVdeg, float nearPlane, float farPlane)
 {
 	glm::mat4 view = glm::mat4(1.0f);
 	glm::mat4 projection = glm::mat4(1.0f);
 
 	view = glm::lookAt(Position, Position + Orientation, Up);
+	projection = glm::perspective(glm::radians(FOVdeg), (float)width / height, nearPlane, farPlane);
 
-	projection = glm::perspective(FOV, (float)(width / height), nearPlane, farPlane);
-
-	GLuint CameraUniform = glGetUniformLocation(ShadeID, "CameraMatrix");
-	glUniformMatrix4fv(CameraUniform, 1, GL_FALSE, glm::value_ptr(projection * view));
-
+	cameraMatrix = projection * view;
 }
 
-void Camera::CameraInputs(GLFWwindow* window)
+void Camera::Matrix(Shader& shader, const char* uniform)
 {
-	if(glfwGetKey(window, GLFW_KEY_W)){
+	glUniformMatrix4fv(glGetUniformLocation(shader.ID, uniform), 1, GL_FALSE, glm::value_ptr(cameraMatrix));
+}
+
+
+
+void Camera::Inputs(GLFWwindow* window)
+{
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+	{
 		Position += speed * Orientation;
 	}
-	if(glfwGetKey(window, GLFW_KEY_A)){
+	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+	{
 		Position += speed * -glm::normalize(glm::cross(Orientation, Up));
 	}
-	if(glfwGetKey(window, GLFW_KEY_S)){
+	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+	{
 		Position += speed * -Orientation;
 	}
-	if(glfwGetKey(window, GLFW_KEY_D)){
+	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+	{
 		Position += speed * glm::normalize(glm::cross(Orientation, Up));
 	}
-
-	if (glfwGetKey(window, GLFW_KEY_Q)) {
-		Position += speed * Up;
-	}
-	if (glfwGetKey(window, GLFW_KEY_R)) {
-		Position += speed * -Up;
-	}
-
-	if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL)) {
-		speed = 0.1f;
-	}
-	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT)) {
-		speed = 0.1f;
-	}
-
-	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS){
-		double xpos, ypos;
-		glfwGetCursorPos(window, &xpos, &ypos);
-		ProcessMouseMovement(xpos, ypos);
-		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-	}
-	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_RELEASE) {
-		firstMouse = true;
-		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
-	}
-}
-
-void Camera::ProcessMouseMovement(double xpos, double ypos)
-{
-	if (firstMouse)
+	if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
 	{
-		lastX = xpos;
-		lastY = ypos;
-		firstMouse = false;
+		speed = 0.4f;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_RELEASE)
+	{
+		speed = 0.1f;
 	}
 
-	float xOffset = xpos - lastX;
-	float yOffset = ypos - lastY;
-	lastX = xpos;
-	lastY = ypos;
 
-	xOffset *= sensitivity;
-	yOffset *= sensitivity;
+	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+	{
+		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 
-	glm::vec3 right = glm::normalize(glm::cross(Orientation, Up));
-	Orientation = glm::rotate(Orientation, glm::radians(-xOffset), Up);
-	Orientation = glm::rotate(Orientation, glm::radians(-yOffset), right);
-	Orientation = glm::normalize(Orientation);
+		if (firstClick)
+		{
+			glfwSetCursorPos(window, (width / 2), (height / 2));
+			firstClick = false;
+		}
+
+		double mouseX;
+		double mouseY;
+		glfwGetCursorPos(window, &mouseX, &mouseY);
+
+		float rotX = sensitivity * (float)(mouseY - (height / 2)) / height;
+		float rotY = sensitivity * (float)(mouseX - (width / 2)) / width;
+
+		glm::vec3 newOrientation = glm::rotate(Orientation, glm::radians(-rotX), glm::normalize(glm::cross(Orientation, Up)));
+
+		if (abs(glm::angle(newOrientation, Up) - glm::radians(90.0f)) <= glm::radians(85.0f))
+		{
+			Orientation = newOrientation;
+		}
+
+		Orientation = glm::rotate(Orientation, glm::radians(-rotY), Up);
+
+		glfwSetCursorPos(window, (width / 2), (height / 2));
+	}
+	else if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_RELEASE)
+	{
+		glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+		firstClick = true;
+	}
 }
-
-glm::mat4 Camera::GetViewMatrix()
-{
-	return glm::lookAt(Position, Position + Orientation, Up);
-}
-	

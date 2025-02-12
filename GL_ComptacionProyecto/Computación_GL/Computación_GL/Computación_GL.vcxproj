@@ -131,29 +131,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="EBO.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="stb.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="EBO.h" />
     <ClInclude Include="Shader.h" />
-    <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="ThirdParty\include\glad\glad.h" />
     <ClInclude Include="ThirdParty\include\GLFW\glfw3.h" />
     <ClInclude Include="ThirdParty\include\GLFW\glfw3native.h" />
     <ClInclude Include="ThirdParty\include\KHR\khrplatform.h" />
     <ClInclude Include="ThirdParty\include\stb\stb_image.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="brickwall.jpg" />
-    <Image Include="guy.jpg" />
+    <Image Include="Textures\brick.png" />
+    <Image Include="Textures\brickwall.jpg" />
+    <Image Include="Textures\guy.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

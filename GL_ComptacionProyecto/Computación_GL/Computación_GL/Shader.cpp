@@ -1,29 +1,36 @@
-#include "Shader.h"
-#include <iostream>
+#include"Shader.h"
 
-Shader::Shader(const char* source, GLenum shaderType) {
-    id = glCreateShader(shaderType);
-    glShaderSource(id, 1, &source, nullptr);
-    glCompileShader(id);
 
-    checkCompileErrors(id, shaderType == GL_VERTEX_SHADER ? "VERTEX" : "FRAGMENT");
+// Constructor del Shader Program a partir de dos shaders
+Shader::Shader(const char* vertexFile, const char* fragmentFile)
+{
+	const char* vertexSource = vertexFile;
+	const char* fragmentSource = fragmentFile;
+
+	GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(vertexShader, 1, &vertexSource, NULL);
+	glCompileShader(vertexShader);
+
+	GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	glShaderSource(fragmentShader, 1, &fragmentSource, NULL);
+	glCompileShader(fragmentShader);
+
+	ID = glCreateProgram();
+	glAttachShader(ID, vertexShader);
+	glAttachShader(ID, fragmentShader);
+	glLinkProgram(ID);
+
+	glDeleteShader(vertexShader);
+	glDeleteShader(fragmentShader);
+
 }
 
-Shader::~Shader() {
-    glDeleteShader(id);
+void Shader::Activate()
+{
+	glUseProgram(ID);
 }
 
-GLuint Shader::getId() const {
-    return id;
+void Shader::Delete()
+{
+	glDeleteProgram(ID);
 }
-
-void Shader::checkCompileErrors(GLuint shader, const std::string& type) {
-    GLint success;
-    GLchar infoLog[1024];
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        glGetShaderInfoLog(shader, 1024, nullptr, infoLog);
-        std::cerr << "ERROR::SHADER_COMPILATION_ERROR of type: " << type << "\n" << infoLog << "\n";
-    }
-}
-

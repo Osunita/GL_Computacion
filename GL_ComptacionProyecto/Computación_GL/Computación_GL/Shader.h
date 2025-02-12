@@ -1,19 +1,23 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include <glad/glad.h>
-#include <string>
+#include<glad/glad.h>
+#include<string>
+#include<fstream>
+#include<sstream>
+#include<iostream>
+#include<cerrno>
 
-class Shader {
+class Shader
+{
 public:
-    Shader(const char* source, GLenum shaderType);
-    ~Shader();
+	GLuint ID;
 
-    GLuint getId() const;
+	Shader(const char* vertexFile, const char* fragmentFile);
 
-private:
-    GLuint id;
-    void checkCompileErrors(GLuint shader, const std::string& type);
+	void Activate();
+	void Delete();
 };
+
 
 #endif
