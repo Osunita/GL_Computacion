@@ -157,6 +157,8 @@
     <Image Include="Textures\brick.png" />
     <Image Include="Textures\brickwall.jpg" />
     <Image Include="Textures\guy.png" />
+    <Image Include="Textures\twood.png" />
+    <Image Include="Textures\wood.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Textures\\brick.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\Textures\\brick.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -13,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\Texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{741CD652-6781-4DF0-A75B-C6CBD4309B9F}|Computaci\u00F3n_GL\\Computaci\u00F3n_GL.vcxproj|solutionrelative:Computaci\u00F3n_GL\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\main.cpp",
               "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\main.cpp",
               "ToolTip": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\main.cpp",
               "RelativeToolTip": "Computaci\u00F3n_GL\\main.cpp",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwLIAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAAAMoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-31T07:58:10.498Z",
               "IsPinned": true,
@@ -48,7 +52,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "brick.png",
+              "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Textures\\brick.png",
+              "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\Textures\\brick.png",
+              "ToolTip": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Textures\\brick.png",
+              "RelativeToolTip": "Computaci\u00F3n_GL\\Textures\\brick.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-02-13T07:23:51.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Shader.cpp",
               "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Shader.cpp",
               "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\Shader.cpp",
@@ -56,12 +71,11 @@
               "RelativeToolTip": "Computaci\u00F3n_GL\\Shader.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T23:44:54.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:44:54.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EBO.cpp",
               "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\EBO.cpp",
               "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\EBO.cpp",
@@ -69,34 +83,31 @@
               "RelativeToolTip": "Computaci\u00F3n_GL\\EBO.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T23:44:50.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:44:50.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Camera.cpp",
               "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Camera.cpp",
               "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\Camera.cpp",
               "ToolTip": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Camera.cpp",
               "RelativeToolTip": "Computaci\u00F3n_GL\\Camera.cpp",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T23:44:46.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T23:44:46.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Texture.cpp",
               "DocumentMoniker": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Texture.cpp",
               "RelativeDocumentMoniker": "Computaci\u00F3n_GL\\Texture.cpp",
               "ToolTip": "D:\\GL_Computacion\\GL_ComptacionProyecto\\Computaci\u00F3n_GL\\Computaci\u00F3n_GL\\Texture.cpp",
               "RelativeToolTip": "Computaci\u00F3n_GL\\Texture.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T22:20:02.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-12T22:20:02.513Z"
             }
           ]
         }
