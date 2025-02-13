@@ -91,7 +91,10 @@
     <Image Include="Textures\wood.jpg">
       <Filter>Archivos de recursos</Filter>
     </Image>
-    <Image Include="Textures\twood.png">
+    <Image Include="Textures\wood.png">
+      <Filter>Archivos de recursos</Filter>
+    </Image>
+    <Image Include="Textures\floor.png">
       <Filter>Archivos de recursos</Filter>
     </Image>
   </ItemGroup>

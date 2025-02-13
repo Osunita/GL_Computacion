@@ -7,6 +7,7 @@
 #include<sstream>
 #include<iostream>
 #include<cerrno>
+#include <glm/fwd.hpp>
 
 class Shader
 {
